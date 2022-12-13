@@ -17,17 +17,17 @@ namespace Projet_C
             int[,] masqueBin = new int[4, 8];
             int[] masque = new int[4];
             int cidr;
-            ip = SaisieIP(); //damien 
-            ipBin = DecimalBinaire(ip);//ioen
+            ip = Damien.SaisieIP(); //damien 
+            ipBin = Ioen.DecimalBinaire(ip);//ioen
             
             Console.WriteLine("Adresse IP : " + ip[0] + "." + ip[1] + "." + ip[2] + "." + ip[3]);
             Console.Write("CIDR ? ");
             
             cidr = int.Parse(Console.ReadLine());
-            masqueBin = CalculMasque(cidr); // erwan
-            ipReseauBin = CalculReseau(ipBin, masqueBin); // Ethan
-            ipReseau = BinDeci(ipReseauBin); // Esteban
-            masque = BinDeci(masqueBin);
+            masqueBin = Erwan.CalculMasque(cidr); // erwan
+            ipReseauBin = Ethan.CalculReseau(ipBin, masqueBin); // Ethan
+            ipReseau = Esteban.BinDeci(ipReseauBin); // Esteban
+            masque = Esteban.BinDeci(masqueBin);
             
             Console.WriteLine("Adresse réseau : " + ipReseau[0] + "." + ipReseau[1] + "." + ipReseau[2] + "." + ipReseau[3]);
             Console.WriteLine("Masque : " + masque[0] + "." + masque[1] + "." + masque[2] + "." + masque[3]);
